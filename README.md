@@ -28,6 +28,8 @@ Grid view sacrifices detailed information for more pictures. Sometimes you want 
 
 # Features
 
+*Copied from [Inventory Grid View](https://www.esoui.com/downloads/info65-InventoryGridView.html)*
+
 * Grid view for your main inventory, your bank, your guild bank, your quest items, NPC's stores, AND the buyback screen!
 * Toggle grid view on and off! Useful for when you need to scan with more information.
 * Customizable grid size.
