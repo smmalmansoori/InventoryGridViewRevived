@@ -1,6 +1,6 @@
 InventoryGridView = {}
 local IGV = InventoryGridView
-IGV.addonVersion = "2.0.9.3"
+IGV.addonVersion = "1.0.0"
 IGV.currentIGVId = nil
 IGV.currentScrollList = nil
 
@@ -15,7 +15,7 @@ IGVID_BUY_BACK   = 7
 local util, settings, adapter
 
 local function InventoryGridViewLoaded(eventCode, addOnName)
-    if addOnName ~= "InventoryGridView" then return end
+    if addOnName ~= "InventoryGridViewRevived" then return end
     EVENT_MANAGER:UnregisterForEvent("InventoryGridViewLoaded", EVENT_ADD_ON_LOADED)
 
     util = IGV.util

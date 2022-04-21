@@ -1,8 +1,8 @@
-## Title: Inventory Grid View
+## Title: Inventory Grid View Revived
 ## Author: Randactyl, ingeniousclown
-## Version: 2.0.9.3
-## AddOnVersion: 02000903
-## APIVersion: 100030
+## Version: 1.0.0
+## AddOnVersion: 1
+## APIVersion: 101033
 ## SavedVariables: InventoryGridView_Settings
 ## DependsOn: LibAddonMenu-2.0>=28
 
