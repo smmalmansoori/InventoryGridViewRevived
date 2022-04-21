@@ -1,12 +1,25 @@
-**DISCLAIMER**: This Add-on is not created by, affiliated with or sponsored by ZeniMax Media Inc. or its affiliates. The Elder Scrolls® and related logos are registered trademarks or trademarks of ZeniMax Media Inc. in the United States and/or other countries. All rights reserved.
+# DISCLAIMER
+
+This Add-on is not created by, affiliated with or sponsored by ZeniMax Media Inc. or its affiliates. The Elder Scrolls® and related logos are registered trademarks or trademarks of ZeniMax Media Inc. in the United States and/or other countries. All rights reserved.
 
 ---
+
+# Dependencies
+
+*You will need to install these separately*
+
+* [LibAddonMenu-2.0](https://www.esoui.com/downloads/info7-LibAddonMenu.html)
+
+# Description
+
+*Copied from [Inventory Grid View](https://www.esoui.com/downloads/info65-InventoryGridView.html)*
 
 Replace your default inventory's list view with a more compact grid view! The default list view shows 11-12 items at a time (in my case), so it can become a pain to navigate your inventory.
 
 Grid view sacrifices detailed information for more pictures. Sometimes you want the detailed information, so I've included a button at the bottom that will toggle the grid on and off.
 
-*Features*:
+# Features
+
 * Grid view for your main inventory, your bank, your guild bank, your quest items, NPC's stores, AND the buyback screen!
 * Toggle grid view on and off! Useful for when you need to scan with more information.
 * Customizable grid size.
@@ -16,7 +29,10 @@ Grid view sacrifices detailed information for more pictures. Sometimes you want 
 * Set scale of item icon animation.
 * Works with Research Assistant and Advanced Filters!
 
-*Special thanks to*:
-* Rushmik, Tonyleila - included extra skin choices
+# Special Thanks
 
-ingeniousclown has stepped away from this addon, however I'm continuing to support it and add new features! If you encounter any bugs or have a suggestion, leave a comment here or message me either on the site or ingame at @Randactyl. If you'd like to donate, I'm always willing to accept in-game gold :D
+* [ingeniousclown](https://www.esoui.com/forums/member.php?action=getinfo&userid=460) - original author of [Inventory Grid View](https://www.esoui.com/downloads/info65-InventoryGridView.html)
+* [Randactyl](https://www.esoui.com/forums/member.php?action=getinfo&userid=4309) - maintainer until 2018
+* [DunkleMaterie](https://www.esoui.com/forums/member.php?action=getinfo&userid=42697) - [maintainer until 2019](https://www.esoui.com/downloads/info2227-InventoryGridView.html#info)
+* [Baertram](https://www.esoui.com/forums/member.php?u=2028) - removed the embedded libraries and LibStub calls and made it depending on LibAddonMenu-2.0
+* Rushmik, [Tonyleila](https://www.esoui.com/forums/member.php?userid=1742) - included extra skin choices
