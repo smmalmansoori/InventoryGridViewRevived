@@ -12,13 +12,21 @@ local function AddColor(control)
     local r, g, b = GetInterfaceColor(INTERFACE_COLOR_TYPE_ITEM_QUALITY_COLORS, quality)
 
     local alpha = 1
-    if quality < IGV.settings.GetMinOutlineQuality() then
+    if quality ~= nil and quality < IGV.settings.GetMinOutlineQuality() then
         alpha = 0
     end
-
-    control:GetNamedChild("Bg"):SetColor(r, g, b, 1)
-    control:GetNamedChild("Outline"):SetColor(r, g, b, alpha)
-    control:GetNamedChild("Highlight"):SetColor(r, g, b, 0)
+    local bg = control:GetNamedChild("Bg")
+    if bg ~= nil then
+      bg:SetColor(r, g, b, 1)
+    end
+    local outline = control:GetNamedChild("Outline")
+    if outline ~= nil then
+      outline:SetColor(r, g, b, alpha)
+    end
+    local highlight = control:GetNamedChild("Highlight")
+    if highlight ~= nil then
+      highlight:SetColor(r, g, b, 0)
+    end
 end
 
 --control = ZO_PlayerInventoryBackpack1Row1 etc.
@@ -74,11 +82,13 @@ local function ReshapeSlot(control, isGrid, width, height)
         if new then new:ClearAnchors() end
 
         if isGrid and traitInfo ~= nil then
+            util.debug("Trait info in grid")
             traitInfo:ClearAnchors()
             traitInfo:SetDimensions(25, 25)
             traitInfo:SetAnchor(TOPRIGHT, control, TOPRIGHT)
             traitInfo:SetDrawTier(DT_HIGH)
         elseif traitInfo ~= nil then
+            util.debug("Trait info without grid")
             traitInfo:ClearAnchors()
             traitInfo:SetDimensions(32, 32)
             traitInfo:SetAnchor(RIGHT, sell, LEFT, -5)
@@ -87,40 +97,51 @@ local function ReshapeSlot(control, isGrid, width, height)
         control:SetDimensions(width, height)
 
         if isGrid == true and new ~= nil then
-            button:SetAnchor(CENTER, control, CENTER)
+            util.debug("New item in grid")
+            if button ~= nil then
+                button:SetAnchor(CENTER, control, CENTER)
+            end
 
             new:SetDimensions(25, 25)
-            new:SetAnchor(TOPLEFT, button:GetNamedChild("Icon"), TOPLEFT, -5, -5)
+            if button ~= nil then new:SetAnchor(TOPLEFT, button:GetNamedChild("Icon"), TOPLEFT, -5, -5) end
             new:SetDrawTier(DT_HIGH)
 
             --disable mouse events on status controls
             new:SetMouseEnabled(false)
             new:GetNamedChild("Texture"):SetMouseEnabled(false)
 
-            name:SetHidden(true)
+            if name then name:SetHidden(true) end
             --stat:SetHidden(true)
 
-            highlight:SetTexture(textureSet.HOVER)
-            highlight:SetTextureCoords(0, 1, 0, 1)
+            if highlight ~= nil then
+              highlight:SetTexture(textureSet.HOVER)
+              highlight:SetTextureCoords(0, 1, 0, 1)
+            end
+            
+            if bg ~= nil then
+              bg:SetTexture(textureSet.BACKGROUND)
+              bg:SetTextureCoords(0, 1, 0, 1)
+            end
 
-            bg:SetTexture(textureSet.BACKGROUND)
-            bg:SetTextureCoords(0, 1, 0, 1)
-
-            if IGV.settings.ShowQualityOutline() then
-                outline:SetTexture(textureSet.OUTLINE)
-                outline:SetHidden(false)
-            else
-                outline:SetHidden(true)
+            if outline ~= nil then
+              if IGV.settings.ShowQualityOutline() then
+                  outline:SetTexture(textureSet.OUTLINE)
+                  outline:SetHidden(false)
+              else
+                  outline:SetHidden(true)
+              end
             end
 
             AddColor(control)
         else
+            util.debug("Item without grid")
             local LIST_SLOT_BACKGROUND = "EsoUI/Art/Miscellaneous/listItem_backdrop.dds"
             local LIST_SLOT_HOVER = "EsoUI/Art/Miscellaneous/listitem_highlight.dds"
 
             if button then button:SetAnchor(CENTER, control, TOPLEFT, 70, 26) end
 
             if new then
+                util.debug("But new item")
                 new:SetDimensions(32, 32)
                 new:SetAnchor(CENTER, control, TOPLEFT, 20, 27)
 
@@ -156,6 +177,12 @@ function util.ReshapeSlots()
     local gridIconSize = IGV.settings.GetGridIconSize()
     local IGVId = IGV.currentIGVId
     local isGrid = IGV.settings.IsGrid(IGVId)
+    local isGridFlag = "false"
+    if isGrid then
+      isGridFlag = "true"
+    end
+    
+    util.debug("Reshape slots on " .. (IGVId or "nil") .. " with flag isGrid ".. isGridFlag)
 
     local width, height
 
@@ -201,4 +228,12 @@ function util.ReshapeSlots()
             ReshapeSlot(v, isGrid, width, height)
         end
     end
+end
+
+function util.debug(message)
+    local settings = IGV.settings
+    
+    if not settings.IsDebug() then return end
+    
+    d("IGV: " .. message)
 end

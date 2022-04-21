@@ -20,6 +20,9 @@ local strings = {
     ["SI_INVENTORYGRIDVIEW_ICONZOOMLEVEL_SLIDER_TOOLTIP"] = "Set icon zoom level (on mouse over) from none to default.",
 
     ["SI_BINDING_NAME_INVENTORYGRIDVIEW_TOGGLE"] = "Toggle Grid/List View",
+    
+    ["SI_BINDING_NAME_INVENTORYGRIDVIEW_DEBUG"] = "Debugging",
+    ["SI_BINDING_NAME_INVENTORYGRIDVIEW_DEBUG_TOOLTIP"] = "Enable or disable debugging",
 }
 
 for stringId, stringValue in pairs(strings) do

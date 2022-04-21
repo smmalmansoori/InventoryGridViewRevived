@@ -1,6 +1,6 @@
 InventoryGridView = {}
 local IGV = InventoryGridView
-IGV.addonVersion = "2.0.9.0"
+IGV.addonVersion = "2.0.9.2c"
 IGV.currentIGVId = nil
 IGV.currentScrollList = nil
 
@@ -40,6 +40,7 @@ local function InventoryGridViewLoaded(eventCode, addOnName)
                 }
 
                 local function onFragmentShowing()
+                    util.debug("Fragment showing igvID " .. (IGVId or "nil"))
                     IGV.currentIGVId = IGVId
                     IGV.currentScrollList = scrollList
 
@@ -49,6 +50,7 @@ local function InventoryGridViewLoaded(eventCode, addOnName)
                 end
 
                 local function onFragmentHiding()
+                    util.debug("Fragment hiding")
                     IGV.currentIGVId = nil
                     IGV.currentScrollList = nil
 

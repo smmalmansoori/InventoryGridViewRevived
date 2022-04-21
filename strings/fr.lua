@@ -17,3 +17,6 @@ SafeAddString(SI_INVENTORYGRIDVIEW_ICONZOOMLEVEL_SLIDER_LABEL, "Niveau de zoom d
 SafeAddString(SI_INVENTORYGRIDVIEW_ICONZOOMLEVEL_SLIDER_TOOLTIP, "Determine le niveau de zoom lorsque la souris passe au-dessus de l'icône.", 1)
 
 SafeAddString(SI_BINDING_NAME_INVENTORYGRIDVIEW_TOGGLE, "Alterner vue grille/vue liste", 1)
+
+SafeAddString(SI_BINDING_NAME_INVENTORYGRIDVIEW_DEBUG, "Debugging", 1)
+SafeAddString(SI_BINDING_NAME_INVENTORYGRIDVIEW_DEBUG_TOOLTIP, "Enable or disable debugging", 1)

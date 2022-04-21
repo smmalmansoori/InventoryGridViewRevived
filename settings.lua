@@ -26,6 +26,7 @@ function settings.InitializeSettings()
         minOutlineQuality = ITEM_QUALITY_MAGIC,
         showQualityOutline = true,
         skinChoice = "Clean by Tonyleila",
+        debug = false,
     }
 
     settings.vars = ZO_SavedVars:NewAccountWide("InventoryGridView_Settings", settings.varsVersion, nil, defaultVars)
@@ -160,6 +161,18 @@ function settings.InitializeSettings()
                 default = defaultVars.gridIconZoomLevel * 100,
             },
             [7] = {
+                type = "checkbox",
+                name = SI_BINDING_NAME_INVENTORYGRIDVIEW_DEBUG,
+                tooltip = SI_BINDING_NAME_INVENTORYGRIDVIEW_DEBUG_TOOLTIP,
+                getFunc = function()
+                    return vars.debug
+                end,
+                setFunc = function(value)
+                    vars.debug = value
+                end,
+                default = defaultVars.debug,
+            },
+            [8] = {
                 type = "custom",
                 reference = "InventoryGridViewSettingsExampleTextureLAMControl",
             },
@@ -224,4 +237,8 @@ end
 
 function settings.IsTooltipOffset()
     return vars.isTooltipOffset
+end
+
+function settings.IsDebug()
+    return vars.debug
 end

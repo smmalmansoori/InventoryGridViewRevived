@@ -17,3 +17,6 @@ SafeAddString(SI_INVENTORYGRIDVIEW_ICONZOOMLEVEL_SLIDER_LABEL, "アイコンの�
 SafeAddString(SI_INVENTORYGRIDVIEW_ICONZOOMLEVEL_SLIDER_TOOLTIP, "マウスカーソルを乗せた時のアイコンのズームレベルを設定します。", 1)
 
 SafeAddString(SI_BINDING_NAME_INVENTORYGRIDVIEW_TOGGLE, "グリッド/リスト表示の切り替え", 1)
+
+SafeAddString(SI_BINDING_NAME_INVENTORYGRIDVIEW_DEBUG, "Debugging", 1)
+SafeAddString(SI_BINDING_NAME_INVENTORYGRIDVIEW_DEBUG_TOOLTIP, "Enable or disable debugging", 1)

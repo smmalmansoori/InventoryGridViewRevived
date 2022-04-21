@@ -17,3 +17,6 @@ SafeAddString(SI_INVENTORYGRIDVIEW_ICONZOOMLEVEL_SLIDER_LABEL, "Symbol Zoom Stuf
 SafeAddString(SI_INVENTORYGRIDVIEW_ICONZOOMLEVEL_SLIDER_TOOLTIP, "Legt die Symbol Zoom Stufe fest (bei Mouse Over) von 'Keine' bis 'Standard'.", 1)
 
 SafeAddString(SI_BINDING_NAME_INVENTORYGRIDVIEW_TOGGLE, "Umschalten Gitter-/Listenansicht", 1)
+
+SafeAddString(SI_BINDING_NAME_INVENTORYGRIDVIEW_DEBUG, "Debugging", 1)
+SafeAddString(SI_BINDING_NAME_INVENTORYGRIDVIEW_DEBUG_TOOLTIP, "Schaltet das Debugging ein oder aus.", 1)
