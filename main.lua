@@ -1,6 +1,6 @@
 InventoryGridView = {}
 local IGV = InventoryGridView
-IGV.addonVersion = "2.0.9.2c"
+IGV.addonVersion = "2.0.9.3"
 IGV.currentIGVId = nil
 IGV.currentScrollList = nil
 

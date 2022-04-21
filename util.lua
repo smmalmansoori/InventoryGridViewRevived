@@ -2,7 +2,7 @@ local IGV = InventoryGridView
 IGV.util = {}
 
 local util = IGV.util
-util.lam = LibStub("LibAddonMenu-2.0")
+util.lam = LibAddonMenu2
 
 local function AddColor(control)
     if not control.dataEntry then return end
