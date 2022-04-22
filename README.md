@@ -4,6 +4,10 @@ This Add-on is not created by, affiliated with or sponsored by ZeniMax Media Inc
 
 ---
 
+# BROKEN! DO NOT DOWNLOAD
+
+As detailed by Baertram in the [comments in esoui.com](https://www.esoui.com/downloads/info3350-BROKENDONOTDOWNLOAD-InventoryGridViewRevived.html#comments) this addon (and its predecessor [Inventory Grid View](https://www.esoui.com/downloads/info65-InventoryGridView.html)) has a history of conflicts with other addons. Please use [GridList](https://www.esoui.com/downloads/info2341-GridList.html) instead.
+
 # Dependencies
 
 *You will need to install these separately*
